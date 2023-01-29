@@ -1,0 +1,12 @@
+# Ignore directory in any project's directiories
+__pycache__
+
+# Ignore file in any project's directiories
+.venv
+.vscode
+.idea
+.env
+
+# Ignore all temporary *.pyc files in any project's directiories
+*.pyc
+
