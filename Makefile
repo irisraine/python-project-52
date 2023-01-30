@@ -12,7 +12,7 @@ compilemessages:
 	poetry run django-admin compilemessages
 	
 start:
-	poetry run gunicorn task_manager.wsgi	
+	poetry run gunicorn --workers=5 task_manager.wsgi	
 
 start-dev:
 	poetry run python manage.py runserver
