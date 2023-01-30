@@ -12,11 +12,13 @@
     {% bootstrap_css %}
     {% load static %}
     <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     {% bootstrap_javascript jquery='full' %}
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
+            <span class="mr-2"><img src="{% static 'img/django.svg' %}" height="25" alt=""></span>
             <a class="navbar-brand" href="#">{% translate "Task Manager" %}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
                 <span class="navbar-toggler-icon"></span>
