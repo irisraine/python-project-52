@@ -1,0 +1,13 @@
+{% extends 'layout/default.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body p-5 bg-light">
+        <div class="display-4">{% translate "Hello From Hexlet" %}</div>
+        <p class="lead">{% translate "Practical Programming Courses" %}</p>
+        <hr>
+        <a class="btn btn-primary btn-lg" href="https://ru.hexlet.io">{% translate "Get More Info" %}</a>
+    </div>
+</div>
+{% endblock %}
