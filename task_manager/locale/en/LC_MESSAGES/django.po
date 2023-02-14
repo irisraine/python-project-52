@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 02:05+0000\n"
+"POT-Creation-Date: 2023-02-14 22:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: task_manager/templates/index.html:8
 msgid "Hello From Hexlet"
-msgstr "Hello from Hexlet!"
+msgstr "Hello from Hexlet"
 
 #: task_manager/templates/index.html:9
 msgid "Practical Programming Courses"
@@ -56,14 +57,14 @@ msgstr "Tasks"
 
 #: task_manager/templates/layout/default.html:46
 msgid "Log Out"
-msgstr "Log out"
+msgstr "Log Out"
 
 #: task_manager/templates/layout/default.html:50
 msgid "Log In"
-msgstr "Log in"
+msgstr "Log In"
 
 #: task_manager/templates/layout/default.html:53
-#: task_manager/templates/users/registration.html:6
+#: task_manager/templates/users/user_create.html:6
 msgid "Register"
 msgstr "Register"
 
@@ -75,9 +76,29 @@ msgstr "Enter"
 msgid "Log In Button"
 msgstr "Login"
 
-#: task_manager/templates/users/registration.html:10
+#: task_manager/templates/users/user_create.html:10
 msgid "Sign Up Button"
 msgstr "Sign up"
+
+#: task_manager/templates/users/user_delete.html:6
+msgid "Delete user"
+msgstr "Delete user"
+
+#: task_manager/templates/users/user_delete.html:9
+msgid "Are you sure you want to delete"
+msgstr "Are you sure you want to delete"
+
+#: task_manager/templates/users/user_delete.html:10
+msgid "Delete Button"
+msgstr "Yes, delete"
+
+#: task_manager/templates/users/user_update.html:6
+msgid "Update user"
+msgstr "Update user"
+
+#: task_manager/templates/users/user_update.html:10
+msgid "Update Button"
+msgstr "Update"
 
 #: task_manager/templates/users/users_list.html:11
 msgid "Username"
@@ -111,9 +132,29 @@ msgstr "Last name"
 msgid "Password should contain at least 3 characters"
 msgstr "Password should contain at least 3 characters"
 
-#: task_manager/users/views.py:20
+#: task_manager/users/mixins.py:16
+msgid "You aren't authorized! Please log in."
+msgstr "You aren't authorized! Please log in."
+
+#: task_manager/users/views.py:21
 msgid "User is successfully registered"
 msgstr "User is successfully registered"
+
+#: task_manager/users/views.py:29
+msgid "User is successfully changed"
+msgstr "User is successfully changed"
+
+#: task_manager/users/views.py:30
+msgid "You don't have permission to change another user."
+msgstr "You don't have permission to change another user."
+
+#: task_manager/users/views.py:37
+msgid "User is successfully deleted"
+msgstr "User is successfully deleted"
+
+#: task_manager/users/views.py:38
+msgid "You don't have permission to delete another user."
+msgstr "You don't have permission to delete another user."
 
 #: task_manager/views.py:16
 msgid "You are logged in"

@@ -21,9 +21,9 @@
                 <td>{{ user.first_name }} {{ user.last_name }}</td>
                 <td>{{ user.date_joined|date:"d.m.Y H:i" }}</td>
                 <td>
-                    <a href='#'>{% translate "Update" %}</a>
+                    <a href="{% url 'update_user' pk=user.id %}">{% translate "Update" %}</a>
                     <br>
-                    <a href='#'>{% translate "Delete" %}</a>
+                    <a href="{% url 'delete_user' pk=user.id %}">{% translate "Delete" %}</a>
                 </td>
             </tr>
         {% endfor %}

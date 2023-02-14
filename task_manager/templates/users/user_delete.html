@@ -1,0 +1,12 @@
+{% extends 'layout/default.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<h1 class="my-4"> {% translate "Delete user" %}</h1>
+<form action="{% url 'delete_user' pk=user.id %}" method="post">
+    {% csrf_token %}
+    <p>{% translate "Are you sure you want to delete" %} {{ user }}?</p>
+    <input class="btn btn-danger" type="submit" value="{% translate 'Delete Button' %}">
+</form>
+{% endblock %}
