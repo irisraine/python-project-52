@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-30 22:39+0000\n"
+"POT-Creation-Date: 2023-02-14 00:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: task_manager/templates/index.html:7
+
+#: task_manager/templates/index.html:8
 msgid "Hello From Hexlet"
 msgstr "Hello from Hexlet!"
 
-#: task_manager/templates/index.html:8
+#: task_manager/templates/index.html:9
 msgid "Practical Programming Courses"
 msgstr "Practical programming courses"
 
-#: task_manager/templates/index.html:10
+#: task_manager/templates/index.html:11
 msgid "Get More Info"
 msgstr "Get more information"
 
@@ -33,18 +34,86 @@ msgstr "Get more information"
 msgid "Hexlet Task Manager"
 msgstr "Hexlet Task manager"
 
-#: task_manager/templates/layout/default.html:20
+#: task_manager/templates/layout/default.html:22
 msgid "Task Manager"
 msgstr "Task manager"
 
-#: task_manager/templates/layout/default.html:27
+#: task_manager/templates/layout/default.html:29
+#: task_manager/templates/users/users_list.html:6
 msgid "Users"
 msgstr "Users"
 
-#: task_manager/templates/layout/default.html:32
-msgid "Log In"
-msgstr "Login"
+#: task_manager/templates/layout/default.html:33
+msgid "Statuses"
+msgstr "Statuses"
 
-#: task_manager/templates/layout/default.html:35
+#: task_manager/templates/layout/default.html:36
+msgid "Labels"
+msgstr "Labels"
+
+#: task_manager/templates/layout/default.html:39
+msgid "Tasks"
+msgstr "Tasks"
+
+#: task_manager/templates/layout/default.html:46
+msgid "Log Out"
+msgstr "Log out"
+
+#: task_manager/templates/layout/default.html:50
+#: task_manager/templates/login.html:10
+msgid "Log In"
+msgstr "Log in"
+
+#: task_manager/templates/layout/default.html:53
+#: task_manager/templates/users/registration.html:6
+#: task_manager/templates/users/registration.html:10
 msgid "Register"
-msgstr "Registration"
+msgstr "Register"
+
+#: task_manager/templates/login.html:6
+msgid "Enter"
+msgstr "Enter"
+
+#: task_manager/templates/users/users_list.html:11
+msgid "Username"
+msgstr "Username"
+
+#: task_manager/templates/users/users_list.html:12
+msgid "Full name"
+msgstr "Full name"
+
+#: task_manager/templates/users/users_list.html:13
+msgid "Creation date"
+msgstr "Creation date"
+
+#: task_manager/templates/users/users_list.html:24
+msgid "Update"
+msgstr "Update"
+
+#: task_manager/templates/users/users_list.html:26
+msgid "Delete"
+msgstr "Delete"
+
+#: task_manager/users/forms.py:11 task_manager/users/forms.py:12
+msgid "First name"
+msgstr "First name"
+
+#: task_manager/users/forms.py:17 task_manager/users/forms.py:18
+msgid "Last name"
+msgstr "Last name"
+
+#: task_manager/users/forms.py:24
+msgid "Password should contain at least 3 characters"
+msgstr "Password should contain at least 3 characters"
+
+#: task_manager/users/views.py:20
+msgid "User is successfully registered"
+msgstr "User is successfully registered"
+
+#: task_manager/views.py:16
+msgid "You are logged in"
+msgstr "You are logged in"
+
+#: task_manager/views.py:23
+msgid "You are logged out"
+msgstr "You are logged out"

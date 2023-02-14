@@ -19,29 +19,47 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
             <span class="mr-2"><img src="{% static 'img/django.svg' %}" height="25" alt=""></span>
-            <a class="navbar-brand" href="#">{% translate "Task Manager" %}</a>
+            <a class="navbar-brand" href="{% url 'index' %}">{% translate "Task Manager" %}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% translate "Users" %}</a>
+                        <a class="nav-link" href="{% url 'users_list' %}">{% translate "Users" %}</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% translate "Statuses" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% translate "Labels" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{% translate "Tasks" %}</a>
+                    </li>
+                    {% endif %}
                 </ul>
                 <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% translate "Log In" %}</a>
+                        <a class="nav-link" href="{% url 'logout' %}">{% trans "Log Out" %}</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">{% translate "Log In" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{% translate "Register" %}</a>
+                        <a class="nav-link" href="{% url 'create_user' %}">{% translate "Register" %}</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
     </header>
     <main class="flex-grow-1">
-        <div class="container-lg mt-5 pt-5 mb-5">
+        <div class="container-lg my-4 pt-5">
+            {% bootstrap_messages %}
             {% block content %}{% endblock %}
         </div>
     </main>

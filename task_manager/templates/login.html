@@ -1,0 +1,12 @@
+{% extends 'layout/default.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+<h1 class="my-4"> {% translate "Enter" %}</h1>
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input class="btn btn-primary" type="submit" value="{% translate 'Log In' %}">
+</form>
+{% endblock %}

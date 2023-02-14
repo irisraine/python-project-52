@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-30 22:38+0000\n"
+"POT-Creation-Date: 2023-02-14 00:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: task_manager/templates/index.html:7
+
+#: task_manager/templates/index.html:8
 msgid "Hello From Hexlet"
 msgstr "Привет от Хекслета!"
 
-#: task_manager/templates/index.html:8
+#: task_manager/templates/index.html:9
 msgid "Practical Programming Courses"
 msgstr "Практические курсы по программированию"
 
-#: task_manager/templates/index.html:10
+#: task_manager/templates/index.html:11
 msgid "Get More Info"
 msgstr "Узнать больше"
 
@@ -35,18 +36,86 @@ msgstr "Узнать больше"
 msgid "Hexlet Task Manager"
 msgstr "Менеджер задач Hexlet"
 
-#: task_manager/templates/layout/default.html:20
+#: task_manager/templates/layout/default.html:22
 msgid "Task Manager"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/layout/default.html:27
+#: task_manager/templates/layout/default.html:29
+#: task_manager/templates/users/users_list.html:6
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/layout/default.html:32
+#: task_manager/templates/layout/default.html:33
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/layout/default.html:36
+msgid "Labels"
+msgstr "Метки"
+
+#: task_manager/templates/layout/default.html:39
+msgid "Tasks"
+msgstr "Задачи"
+
+#: task_manager/templates/layout/default.html:46
+msgid "Log Out"
+msgstr "Выход"
+
+#: task_manager/templates/layout/default.html:50
+#: task_manager/templates/login.html:10
 msgid "Log In"
 msgstr "Вход"
 
-#: task_manager/templates/layout/default.html:35
+#: task_manager/templates/layout/default.html:53
+#: task_manager/templates/users/registration.html:6
+#: task_manager/templates/users/registration.html:10
 msgid "Register"
 msgstr "Регистрация"
+
+#: task_manager/templates/login.html:6
+msgid "Enter"
+msgstr "Вход"
+
+#: task_manager/templates/users/users_list.html:11
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/users_list.html:12
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/templates/users/users_list.html:13
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: task_manager/templates/users/users_list.html:24
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/users/users_list.html:26
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/users/forms.py:11 task_manager/users/forms.py:12
+msgid "First name"
+msgstr "Имя"
+
+#: task_manager/users/forms.py:17 task_manager/users/forms.py:18
+msgid "Last name"
+msgstr "Фамилия"
+
+#: task_manager/users/forms.py:24
+msgid "Password should contain at least 3 characters"
+msgstr "Ваш пароль должен содержать как минимум 3 символа."
+
+#: task_manager/users/views.py:20
+msgid "User is successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/views.py:16
+msgid "You are logged in"
+msgstr "Вы залогинены"
+
+#: task_manager/views.py:23
+msgid "You are logged out"
+msgstr "Вы разлогинены"
