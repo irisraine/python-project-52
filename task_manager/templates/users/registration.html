@@ -7,6 +7,6 @@
 <form action="{% url 'create_user' %}" method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
-    <input class="btn btn-primary" type="submit" value="{% translate 'Register' %}">
+    <input class="btn btn-primary" type="submit" value="{% translate 'Sign Up Button' %}">
 </form>
 {% endblock %}
