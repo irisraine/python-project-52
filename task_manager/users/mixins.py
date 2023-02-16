@@ -1,13 +1,10 @@
 from django.contrib import messages
 from django.shortcuts import redirect
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.urls import reverse_lazy
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.utils.translation import gettext_lazy as _
 
 
-class UserPermissionMixin(LoginRequiredMixin, UserPassesTestMixin):
-    login_url = reverse_lazy("login")
-
+class UserPermissionMixin(UserPassesTestMixin):
     def test_func(self):
         return self.request.user.pk == self.get_object().pk or self.request.user.is_superuser
 
