@@ -2,8 +2,9 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
+{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Users" %} | {% translate "Update user" %}{% endblock %}
 {% block content %}
-<h1 class="my-4"> {% translate "Update user" %}</h1>
+<h1 class="my-4">{% translate "Update user" %}</h1>
 <form action="{% url 'update_user' pk=user.id %}" method="post">
     {% csrf_token %}
     {% bootstrap_form form %}

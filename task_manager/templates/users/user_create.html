@@ -2,8 +2,9 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
+{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Register" %}{% endblock %}
 {% block content %}
-<h1 class="my-4"> {% translate "Register" %}</h1>
+<h1 class="my-4">{% translate "Register" %}</h1>
 {% if not user.is_authenticated %}
 <form action="{% url 'create_user' %}" method="post">
     {% csrf_token %}

@@ -2,8 +2,9 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
+{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Users" %} | {% translate "Delete user" %}{% endblock %}
 {% block content %}
-<h1 class="my-4"> {% translate "Delete user" %}</h1>
+<h1 class="my-4">{% translate "Delete user" %}</h1>
 <form action="{% url 'delete_user' pk=user.id %}" method="post">
     {% csrf_token %}
     <p>{% translate "Are you sure you want to delete" %} {{ user }}?</p>
