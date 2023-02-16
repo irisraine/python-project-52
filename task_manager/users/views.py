@@ -27,7 +27,7 @@ class UserUpdateView(SuccessMessageMixin, UserPermissionMixin, UpdateView):
     form_class = UserForm
     success_url = reverse_lazy('users_list')
     success_message = _('User is successfully changed')
-    permission_error_message = _("You don't have permission to change another user.")
+    permission_denial_message = _("You don't have permission to change another user.")
 
 
 class UserDeleteView(SuccessMessageMixin, UserPermissionMixin, DeleteView):
@@ -35,4 +35,4 @@ class UserDeleteView(SuccessMessageMixin, UserPermissionMixin, DeleteView):
     model = User
     success_url = reverse_lazy('users_list')
     success_message = _('User is successfully deleted')
-    permission_error_message = _("You don't have permission to delete another user.")
+    permission_denial_message = _("You don't have permission to delete another user.")

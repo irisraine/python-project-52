@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-14 22:13+0000\n"
+"POT-Creation-Date: 2023-02-16 21:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,13 +72,21 @@ msgstr "Register"
 msgid "Enter"
 msgstr "Enter"
 
-#: task_manager/templates/login.html:10
+#: task_manager/templates/login.html:11
 msgid "Log In Button"
 msgstr "Login"
 
-#: task_manager/templates/users/user_create.html:10
+#: task_manager/templates/login.html:14
+msgid "You are already logged in! Try logging out and signing in again."
+msgstr "You are already logged in! Try logging out and signing in again."
+
+#: task_manager/templates/users/user_create.html:11
 msgid "Sign Up Button"
 msgstr "Sign up"
+
+#: task_manager/templates/users/user_create.html:14
+msgid "You can't register a new user when you are already logged in! Try logging out and signing up again."
+msgstr "You can't register a new user when you are already logged in! Try logging out and signing up again."
 
 #: task_manager/templates/users/user_delete.html:6
 msgid "Delete user"

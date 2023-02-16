@@ -15,5 +15,5 @@ class UserPermissionMixin(LoginRequiredMixin, UserPassesTestMixin):
         if not self.request.user.is_authenticated:
             messages.error(self.request, _("You aren't authorized! Please log in."))
             return redirect('login')
-        messages.error(self.request, self.permission_error_message)
+        messages.error(self.request, self.permission_denial_message)
         return redirect('users_list')
