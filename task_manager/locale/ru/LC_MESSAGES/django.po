@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-16 21:53+0000\n"
+"POT-Creation-Date: 2023-02-18 16:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,33 +19,69 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: task_manager/statuses/forms.py:10 task_manager/statuses/forms.py:11
+#: task_manager/templates/statuses/statuses_list.html:13
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/statuses/mixins.py:12 task_manager/users/mixins.py:13
+msgid "AuthorizationRequired"
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task_manager/statuses/views.py:21
+msgid "StatusCreateSuccess"
+msgstr "Статус успешно создан"
+
+#: task_manager/statuses/views.py:29
+msgid "StatusUpdateSuccess"
+msgstr "Статус успешно изменен"
+
+#: task_manager/statuses/views.py:36
+msgid "StatusDeleteSuccess"
+msgstr "Статус успешно удален"
 
 #: task_manager/templates/index.html:8
-msgid "Hello From Hexlet"
+msgid "HelloMessage"
 msgstr "Привет от Хекслета!"
 
 #: task_manager/templates/index.html:9
-msgid "Practical Programming Courses"
+msgid "MainIndexContentInfo"
 msgstr "Практические курсы по программированию"
 
 #: task_manager/templates/index.html:11
-msgid "Get More Info"
+msgid "ButtonGetMoreInfo"
 msgstr "Узнать больше"
 
 #: task_manager/templates/layout/default.html:11
-msgid "Hexlet Task Manager"
+#: task_manager/templates/login.html:5
+#: task_manager/templates/statuses/status_create.html:5
+#: task_manager/templates/statuses/status_delete.html:5
+#: task_manager/templates/statuses/status_update.html:5
+#: task_manager/templates/statuses/statuses_list.html:5
+#: task_manager/templates/users/user_create.html:5
+#: task_manager/templates/users/user_delete.html:5
+#: task_manager/templates/users/user_update.html:5
+#: task_manager/templates/users/users_list.html:5
+msgid "HexletTaskManager"
 msgstr "Менеджер задач Hexlet"
 
 #: task_manager/templates/layout/default.html:22
-msgid "Task Manager"
+msgid "TaskManager"
 msgstr "Менеджер задач"
 
 #: task_manager/templates/layout/default.html:29
-#: task_manager/templates/users/users_list.html:6
+#: task_manager/templates/users/user_delete.html:5
+#: task_manager/templates/users/user_update.html:5
+#: task_manager/templates/users/users_list.html:5
+#: task_manager/templates/users/users_list.html:7
 msgid "Users"
 msgstr "Пользователи"
 
 #: task_manager/templates/layout/default.html:33
+#: task_manager/templates/statuses/status_delete.html:5
+#: task_manager/templates/statuses/status_update.html:5
+#: task_manager/templates/statuses/statuses_list.html:5
+#: task_manager/templates/statuses/statuses_list.html:7
 msgid "Statuses"
 msgstr "Статусы"
 
@@ -58,118 +94,140 @@ msgid "Tasks"
 msgstr "Задачи"
 
 #: task_manager/templates/layout/default.html:46
-msgid "Log Out"
+msgid "LogOut"
 msgstr "Выход"
 
 #: task_manager/templates/layout/default.html:50
-msgid "Log In"
+msgid "LogIn"
 msgstr "Вход"
 
 #: task_manager/templates/layout/default.html:53
-#: task_manager/templates/users/user_create.html:6
+#: task_manager/templates/users/user_create.html:5
+#: task_manager/templates/users/user_create.html:7
 msgid "Register"
 msgstr "Регистрация"
 
-#: task_manager/templates/login.html:6
+#: task_manager/templates/login.html:5 task_manager/templates/login.html:7
 msgid "Enter"
 msgstr "Вход"
 
-#: task_manager/templates/login.html:11
-msgid "Log In Button"
+#: task_manager/templates/login.html:12
+msgid "ButtonSignIn"
 msgstr "Войти"
 
-#: task_manager/templates/login.html:14
-msgid "You are already logged in! Try logging out and signing in again."
+#: task_manager/templates/login.html:15
+msgid "AuthorizationAlreadyLogIn"
 msgstr "Вы уже вошли в систему! Попробуйте выйти и снова войти."
 
-#: task_manager/templates/users/user_create.html:11
-msgid "Sign Up Button"
-msgstr "Зарегистрировать"
+#: task_manager/templates/statuses/status_create.html:5
+#: task_manager/templates/statuses/status_create.html:7
+#: task_manager/templates/statuses/statuses_list.html:8
+msgid "StatusCreate"
+msgstr "Создать статус"
 
-#: task_manager/templates/users/user_create.html:14
-msgid "You can't register a new user when you are already logged in! Try logging out and signing up again."
-msgstr "Вы не можете зарегистрировать нового пользователя, если вы уже вошли в систему! Попробуйте выйти и снова зарегистрироваться."
+#: task_manager/templates/statuses/status_create.html:11
+msgid "ButtonCreate"
+msgstr "Создать"
 
-#: task_manager/templates/users/user_delete.html:6
-msgid "Delete user"
-msgstr "Удаление пользователя"
+#: task_manager/templates/statuses/status_delete.html:5
+#: task_manager/templates/statuses/status_delete.html:7
+msgid "StatusDelete"
+msgstr "Удаление статуса"
 
-#: task_manager/templates/users/user_delete.html:9
-msgid "Are you sure you want to delete"
+#: task_manager/templates/statuses/status_delete.html:10
+#: task_manager/templates/users/user_delete.html:10
+msgid "DeleteConfirmQuestion"
 msgstr "Вы уверены, что хотите удалить"
 
-#: task_manager/templates/users/user_delete.html:10
-msgid "Delete Button"
+#: task_manager/templates/statuses/status_delete.html:11
+#: task_manager/templates/users/user_delete.html:11
+msgid "ButtonDeleteConfirm"
 msgstr "Да, удалить"
 
-#: task_manager/templates/users/user_update.html:6
-msgid "Update user"
-msgstr "Изменение пользователя"
+#: task_manager/templates/statuses/status_update.html:5
+#: task_manager/templates/statuses/status_update.html:7
+msgid "StatusUpdate"
+msgstr "Изменение статуса"
 
-#: task_manager/templates/users/user_update.html:10
-msgid "Update Button"
-msgstr "Изменить"
-
-#: task_manager/templates/users/users_list.html:11
-msgid "Username"
-msgstr "Имя пользователя"
-
-#: task_manager/templates/users/users_list.html:12
-msgid "Full name"
-msgstr "Полное имя"
-
-#: task_manager/templates/users/users_list.html:13
-msgid "Creation date"
-msgstr "Дата создания"
-
-#: task_manager/templates/users/users_list.html:24
+#: task_manager/templates/statuses/status_update.html:11
+#: task_manager/templates/statuses/statuses_list.html:24
+#: task_manager/templates/users/user_update.html:11
+#: task_manager/templates/users/users_list.html:25
 msgid "Update"
 msgstr "Изменить"
 
-#: task_manager/templates/users/users_list.html:26
+#: task_manager/templates/statuses/statuses_list.html:14
+#: task_manager/templates/users/users_list.html:14
+msgid "CreationDate"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/statuses_list.html:26
+#: task_manager/templates/users/users_list.html:27
 msgid "Delete"
 msgstr "Удалить"
 
+#: task_manager/templates/users/user_create.html:12
+msgid "ButtonSignUp"
+msgstr "Зарегистрировать"
+
+#: task_manager/templates/users/user_create.html:15
+msgid "UserRegisterDenialWhenAlreadyLogIn"
+msgstr "Вы не можете зарегистрировать нового пользователя, если вы уже вошли в систему! Попробуйте выйти и снова зарегистрироваться."
+
+#: task_manager/templates/users/user_delete.html:5
+#: task_manager/templates/users/user_delete.html:7
+msgid "UserDelete"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/user_update.html:5
+#: task_manager/templates/users/user_update.html:7
+msgid "UserUpdate"
+msgstr "Изменение пользователя"
+
+#: task_manager/templates/users/users_list.html:12
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/users_list.html:13
+msgid "FullName"
+msgstr "Полное имя"
+
 #: task_manager/users/forms.py:11 task_manager/users/forms.py:12
-msgid "First name"
+msgid "FirstName"
 msgstr "Имя"
 
 #: task_manager/users/forms.py:17 task_manager/users/forms.py:18
-msgid "Last name"
+msgid "LastName"
 msgstr "Фамилия"
 
 #: task_manager/users/forms.py:24
-msgid "Password should contain at least 3 characters"
+msgid "PasswordLengthRequirement"
 msgstr "Ваш пароль должен содержать как минимум 3 символа."
 
-#: task_manager/users/mixins.py:16
-msgid "You aren't authorized! Please log in."
-msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
-
 #: task_manager/users/views.py:21
-msgid "User is successfully registered"
+msgid "UserCreateSuccess"
 msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/users/views.py:29
-msgid "User is successfully changed"
-msgstr "Пользователь успешно изменён"
+msgid "UserUpdateSuccess"
+msgstr "Пользователь успешно изменен"
 
 #: task_manager/users/views.py:30
-msgid "You don't have permission to change another user."
+msgid "UserUpdateDenial"
 msgstr "У вас нет прав для изменения другого пользователя."
 
 #: task_manager/users/views.py:37
-msgid "User is successfully deleted"
+msgid "UserDeleteSuccess"
 msgstr "Пользователь успешно удален"
 
 #: task_manager/users/views.py:38
-msgid "You don't have permission to delete another user."
+msgid "UserDeleteDenial"
 msgstr "У вас нет прав для удаления другого пользователя."
 
 #: task_manager/views.py:16
-msgid "You are logged in"
+msgid "UserLogIn"
 msgstr "Вы залогинены"
 
 #: task_manager/views.py:23
-msgid "You are logged out"
+msgid "UserLogOut"
 msgstr "Вы разлогинены"

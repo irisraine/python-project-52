@@ -9,6 +9,6 @@ class AuthorizationMixin(LoginRequiredMixin):
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            messages.error(self.request, _("You aren't authorized! Please log in."))
+            messages.error(self.request, _("AuthorizationRequired"))
             return redirect('login')
         return super().dispatch(request, *args, **kwargs)

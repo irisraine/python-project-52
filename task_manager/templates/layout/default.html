@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% translate "Hexlet Task Manager" %}{% endblock %}</title>
+    <title>{% block title %}{% translate "HexletTaskManager" %}{% endblock %}</title>
     {% bootstrap_css %}
     {% load static %}
     <link href="{% static 'style.css' %}" rel="stylesheet">
@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
             <span class="mr-2"><img src="{% static 'img/django.svg' %}" height="25" alt=""></span>
-            <a class="navbar-brand" href="{% url 'index' %}">{% translate "Task Manager" %}</a>
+            <a class="navbar-brand" href="{% url 'index' %}">{% translate "TaskManager" %}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,11 +43,11 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout' %}">{% trans "Log Out" %}</a>
+                        <a class="nav-link" href="{% url 'logout' %}">{% trans "LogOut" %}</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'login' %}">{% translate "Log In" %}</a>
+                        <a class="nav-link" href="{% url 'login' %}">{% translate "LogIn" %}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'create_user' %}">{% translate "Register" %}</a>

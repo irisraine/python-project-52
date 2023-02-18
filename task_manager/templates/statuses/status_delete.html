@@ -2,12 +2,12 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
-{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Statuses" %} | {% translate "Delete status" %}{% endblock %}
+{% block title %}{% translate "HexletTaskManager" %} | {% translate "Statuses" %} | {% translate "StatusDelete" %}{% endblock %}
 {% block content %}
-<h1 class="my-4">{% translate "Delete status" %}</h1>
+<h1 class="my-4">{% translate "StatusDelete" %}</h1>
 <form method="post">
     {% csrf_token %}
-    <p>{% translate "Are you sure you want to delete" %} {{ status }}?</p>
-    <input class="btn btn-danger" type="submit" value="{% translate 'Delete Status Button' %}">
+    <p>{% translate "DeleteConfirmQuestion" %} {{ status }}?</p>
+    <input class="btn btn-danger" type="submit" value="{% translate 'ButtonDeleteConfirm' %}">
 </form>
 {% endblock %}

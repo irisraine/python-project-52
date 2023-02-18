@@ -2,12 +2,12 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
-{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Users" %} | {% translate "Update user" %}{% endblock %}
+{% block title %}{% translate "HexletTaskManager" %} | {% translate "Users" %} | {% translate "UserUpdate" %}{% endblock %}
 {% block content %}
-<h1 class="my-4">{% translate "Update user" %}</h1>
+<h1 class="my-4">{% translate "UserUpdate" %}</h1>
 <form method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
-    <input class="btn btn-primary" type="submit" value="{% translate 'Update Button' %}">
+    <input class="btn btn-primary" type="submit" value="{% translate 'Update' %}">
 </form>
 {% endblock %}

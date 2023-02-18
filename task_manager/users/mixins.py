@@ -10,7 +10,7 @@ class UserPermissionMixin(UserPassesTestMixin):
 
     def handle_no_permission(self):
         if not self.request.user.is_authenticated:
-            messages.error(self.request, _("You aren't authorized! Please log in."))
+            messages.error(self.request, _("AuthorizationRequired"))
             return redirect('login')
         messages.error(self.request, self.permission_denial_message)
         return redirect('users_list')

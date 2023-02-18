@@ -8,20 +8,20 @@ class UserForm(UserCreationForm):
     first_name = forms.CharField(
         max_length=150,
         required=True,
-        label=_("First name"),
-        widget=forms.TextInput(attrs={'placeholder': _('First name')}),
+        label=_("FirstName"),
+        widget=forms.TextInput(attrs={'placeholder': _('FirstName')}),
     )
     last_name = forms.CharField(
         max_length=150,
         required=True,
-        label=_("Last name"),
-        widget=forms.TextInput(attrs={'placeholder': _('Last name')}),
+        label=_("LastName"),
+        widget=forms.TextInput(attrs={'placeholder': _('LastName')}),
     )
 
     def __init__(self, *args, **kwargs):
         super(UserCreationForm, self).__init__(*args, **kwargs)
         self.fields['password1'].help_text = _(
-            'Password should contain at least 3 characters'
+            'PasswordLengthRequirement'
         )
 
     class Meta:
