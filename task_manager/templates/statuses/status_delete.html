@@ -1,0 +1,13 @@
+{% extends 'layout/default.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Statuses" %} | {% translate "Delete status" %}{% endblock %}
+{% block content %}
+<h1 class="my-4">{% translate "Delete status" %}</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>{% translate "Are you sure you want to delete" %} {{ status }}?</p>
+    <input class="btn btn-danger" type="submit" value="{% translate 'Delete Status Button' %}">
+</form>
+{% endblock %}

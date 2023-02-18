@@ -1,0 +1,13 @@
+{% extends 'layout/default.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{% translate "Hexlet Task Manager" %} | {% translate "Statuses" %} | {% translate "Update status" %}{% endblock %}
+{% block content %}
+<h1 class="my-4">{% translate "Update status" %}</h1>
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input class="btn btn-primary" type="submit" value="{% translate 'Update Status Button' %}">
+</form>
+{% endblock %}
