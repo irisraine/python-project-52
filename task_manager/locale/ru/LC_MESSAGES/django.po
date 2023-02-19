@@ -248,17 +248,17 @@ msgstr "исполнитель не назначен"
 #: task_manager/templates/tasks/task_create.html:7
 #: task_manager/templates/tasks/tasks_list.html:8
 msgid "TaskCreate"
-msgstr "Создать статус"
+msgstr "Создать задачу"
 
 #: task_manager/templates/tasks/task_delete.html:5
 #: task_manager/templates/tasks/task_delete.html:7
 msgid "TaskDelete"
-msgstr "Удалить статус"
+msgstr "Удалить задачу"
 
 #: task_manager/templates/tasks/task_update.html:5
 #: task_manager/templates/tasks/task_update.html:7
 msgid "TaskUpdate"
-msgstr "Изменить статус"
+msgstr "Изменить задачу"
 
 #: task_manager/templates/users/user_create.html:12
 msgid "ButtonSignUp"
