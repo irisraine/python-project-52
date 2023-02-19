@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-18 16:08+0000\n"
+"POT-Creation-Date: 2023-02-19 12:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: task_manager/mixins.py:12
+msgid "AuthorizationRequired"
+msgstr "You aren't authorized! You need to log in first."
+
 #: task_manager/statuses/forms.py:10 task_manager/statuses/forms.py:11
+#: task_manager/tasks/forms.py:12 task_manager/tasks/forms.py:13
 #: task_manager/templates/statuses/statuses_list.html:13
+#: task_manager/templates/tasks/tasks_list.html:13
 msgid "Name"
 msgstr "Name"
 
-#: task_manager/statuses/mixins.py:12 task_manager/users/mixins.py:13
-msgid "AuthorizationRequired"
-msgstr "You aren't authorized! Please log in."
-
-#: task_manager/statuses/views.py:21
+#: task_manager/statuses/views.py:23
 msgid "StatusCreateSuccess"
 msgstr "Status is successfully created"
 
-#: task_manager/statuses/views.py:29
+#: task_manager/statuses/views.py:31
 msgid "StatusUpdateSuccess"
 msgstr "Status is successfully updated"
 
-#: task_manager/statuses/views.py:36
+#: task_manager/statuses/views.py:38
 msgid "StatusDeleteSuccess"
 msgstr "Status is successfully deleted"
+
+#: task_manager/statuses/views.py:43
+msgid "StatusOnTaskDeleteDenial"
+msgstr "The status cannot be deleted because it is currently in use."
+
+#: task_manager/tasks/forms.py:16 task_manager/tasks/forms.py:18
+msgid "Description"
+msgstr "Description"
+
+#: task_manager/tasks/forms.py:24 task_manager/templates/tasks/task.html:25
+#: task_manager/templates/tasks/tasks_list.html:14
+msgid "Status"
+msgstr "Status"
+
+#: task_manager/tasks/forms.py:26
+msgid "SelectStatus"
+msgstr "please select status..."
+
+#: task_manager/tasks/forms.py:30 task_manager/templates/tasks/task.html:21
+#: task_manager/templates/tasks/tasks_list.html:16
+msgid "Executor"
+msgstr "Executor"
+
+#: task_manager/tasks/forms.py:32
+msgid "SelectExecutor"
+msgstr "please select executor..."
+
+#: task_manager/tasks/views.py:27
+msgid "TaskCreateSuccess"
+msgstr "Task is successfully created"
+
+#: task_manager/tasks/views.py:39
+msgid "TaskUpdateSuccess"
+msgstr "Task is successfully updated"
+
+#: task_manager/tasks/views.py:46
+msgid "TaskDeleteSuccess"
+msgstr "Task is successfully deleted"
 
 #: task_manager/templates/index.html:8
 msgid "HelloMessage"
@@ -56,6 +97,11 @@ msgstr "Get more information"
 #: task_manager/templates/statuses/status_delete.html:5
 #: task_manager/templates/statuses/status_update.html:5
 #: task_manager/templates/statuses/statuses_list.html:5
+#: task_manager/templates/tasks/task.html:5
+#: task_manager/templates/tasks/task_create.html:5
+#: task_manager/templates/tasks/task_delete.html:5
+#: task_manager/templates/tasks/task_update.html:5
+#: task_manager/templates/tasks/tasks_list.html:5
 #: task_manager/templates/users/user_create.html:5
 #: task_manager/templates/users/user_delete.html:5
 #: task_manager/templates/users/user_update.html:5
@@ -76,6 +122,7 @@ msgid "Users"
 msgstr "Users"
 
 #: task_manager/templates/layout/default.html:33
+#: task_manager/templates/statuses/status_create.html:5
 #: task_manager/templates/statuses/status_delete.html:5
 #: task_manager/templates/statuses/status_update.html:5
 #: task_manager/templates/statuses/statuses_list.html:5
@@ -84,10 +131,16 @@ msgid "Statuses"
 msgstr "Statuses"
 
 #: task_manager/templates/layout/default.html:36
+#: task_manager/templates/tasks/task.html:35
 msgid "Labels"
 msgstr "Labels"
 
 #: task_manager/templates/layout/default.html:39
+#: task_manager/templates/tasks/task_create.html:5
+#: task_manager/templates/tasks/task_delete.html:5
+#: task_manager/templates/tasks/task_update.html:5
+#: task_manager/templates/tasks/tasks_list.html:5
+#: task_manager/templates/tasks/tasks_list.html:7
 msgid "Tasks"
 msgstr "Tasks"
 
@@ -124,6 +177,7 @@ msgid "StatusCreate"
 msgstr "Create status"
 
 #: task_manager/templates/statuses/status_create.html:11
+#: task_manager/templates/tasks/task_create.html:11
 msgid "ButtonCreate"
 msgstr "Create"
 
@@ -133,11 +187,13 @@ msgid "StatusDelete"
 msgstr "Delete status"
 
 #: task_manager/templates/statuses/status_delete.html:10
+#: task_manager/templates/tasks/task_delete.html:10
 #: task_manager/templates/users/user_delete.html:10
 msgid "DeleteConfirmQuestion"
 msgstr "Are you sure you want to delete"
 
 #: task_manager/templates/statuses/status_delete.html:11
+#: task_manager/templates/tasks/task_delete.html:11
 #: task_manager/templates/users/user_delete.html:11
 msgid "ButtonDeleteConfirm"
 msgstr "Yes, delete"
@@ -149,20 +205,58 @@ msgstr "Update status"
 
 #: task_manager/templates/statuses/status_update.html:11
 #: task_manager/templates/statuses/statuses_list.html:24
+#: task_manager/templates/tasks/task.html:43
+#: task_manager/templates/tasks/task_update.html:11
+#: task_manager/templates/tasks/tasks_list.html:30
 #: task_manager/templates/users/user_update.html:11
 #: task_manager/templates/users/users_list.html:25
 msgid "Update"
 msgstr "Update"
 
 #: task_manager/templates/statuses/statuses_list.html:14
+#: task_manager/templates/tasks/task.html:29
+#: task_manager/templates/tasks/tasks_list.html:17
 #: task_manager/templates/users/users_list.html:14
 msgid "CreationDate"
 msgstr "Creation date"
 
 #: task_manager/templates/statuses/statuses_list.html:26
+#: task_manager/templates/tasks/task.html:44
+#: task_manager/templates/tasks/tasks_list.html:32
 #: task_manager/templates/users/users_list.html:27
 msgid "Delete"
 msgstr "Delete"
+
+#: task_manager/templates/tasks/task.html:5
+#: task_manager/templates/tasks/task.html:7
+msgid "TaskShow"
+msgstr "Show task"
+
+#: task_manager/templates/tasks/task.html:17
+#: task_manager/templates/tasks/tasks_list.html:15
+msgid "Author"
+msgstr "Author"
+
+#: task_manager/templates/tasks/task.html:22
+#: task_manager/templates/tasks/tasks_list.html:27
+msgid "NotAssignedYet"
+msgstr "executor isn't assigned yet"
+
+#: task_manager/templates/tasks/task_create.html:5
+#: task_manager/templates/tasks/task_create.html:7
+#: task_manager/templates/tasks/tasks_list.html:8
+msgid "TaskCreate"
+msgstr "Create task"
+
+#: task_manager/templates/tasks/task_delete.html:5
+#: task_manager/templates/tasks/task_delete.html:7
+msgid "TaskDelete"
+msgstr "Delete task"
+
+#: task_manager/templates/tasks/task_update.html:5
+#: task_manager/templates/tasks/task_update.html:7
+msgid "TaskUpdate"
+msgstr "Update task"
 
 #: task_manager/templates/users/user_create.html:12
 msgid "ButtonSignUp"
@@ -170,7 +264,9 @@ msgstr "Sign up"
 
 #: task_manager/templates/users/user_create.html:15
 msgid "UserRegisterDenialWhenAlreadyLogIn"
-msgstr "You can't register a new user when you are already logged in! Try logging out and signing up again."
+msgstr ""
+"You can't register a new user when you are already logged in! Try logging "
+"out and signing up again."
 
 #: task_manager/templates/users/user_delete.html:5
 #: task_manager/templates/users/user_delete.html:7
@@ -202,25 +298,29 @@ msgstr "Last name"
 msgid "PasswordLengthRequirement"
 msgstr "Password should contain at least 3 characters"
 
-#: task_manager/users/views.py:21
+#: task_manager/users/views.py:23
 msgid "UserCreateSuccess"
 msgstr "User is successfully registered"
 
-#: task_manager/users/views.py:29
+#: task_manager/users/views.py:31
 msgid "UserUpdateSuccess"
 msgstr "User is successfully updated"
 
-#: task_manager/users/views.py:30
+#: task_manager/users/views.py:32
 msgid "UserUpdateDenial"
 msgstr "You don't have permission to update another user."
 
-#: task_manager/users/views.py:37
+#: task_manager/users/views.py:39
 msgid "UserDeleteSuccess"
 msgstr "User is successfully deleted"
 
-#: task_manager/users/views.py:38
+#: task_manager/users/views.py:40
 msgid "UserDeleteDenial"
 msgstr "You don't have permission to delete another user."
+
+#: task_manager/users/views.py:45
+msgid "UserOnTaskDeleteDenial"
+msgstr "The user cannot be deleted because he is currently in use."
 
 #: task_manager/views.py:16
 msgid "UserLogIn"

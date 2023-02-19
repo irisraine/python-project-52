@@ -1,6 +1,8 @@
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView
+from django.contrib import messages
+from django.shortcuts import redirect
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.messages.views import SuccessMessageMixin
-from .mixins import AuthorizationMixin
+from task_manager.mixins import AuthorizationMixin
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from .models import Status
@@ -34,3 +36,11 @@ class StatusDeleteView(SuccessMessageMixin, AuthorizationMixin, DeleteView):
     model = Status
     success_url = reverse_lazy('statuses_list')
     success_message = _('StatusDeleteSuccess')
+
+    def post(self, request, *args, **kwargs):
+        status = Status.objects.get(id=kwargs['pk'])
+        if status.task_set.all():
+            messages.error(self.request, _("StatusOnTaskDeleteDenial"))
+            return redirect('/statuses/')
+        else:
+            return super().post(self, request, *args, **kwargs)

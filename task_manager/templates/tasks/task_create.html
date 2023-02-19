@@ -2,9 +2,9 @@
 {% load bootstrap4 %}
 {% load i18n %}
 
-{% block title %}{% translate "HexletTaskManager" %} | {% translate "Statuses" %} | {% translate "StatusCreate" %}{% endblock %}
+{% block title %}{% translate "HexletTaskManager" %} | {% translate "Tasks" %} | {% translate "TaskCreate" %}{% endblock %}
 {% block content %}
-<h1 class="my-4">{% translate "StatusCreate" %}</h1>
+<h1 class="my-4">{% translate "TaskCreate" %}</h1>
 <form method="post">
     {% csrf_token %}
     {% bootstrap_form form %}

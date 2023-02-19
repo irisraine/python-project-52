@@ -1,0 +1,38 @@
+{% extends 'layout/default.html' %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block title %}{% translate "HexletTaskManager" %} | {% translate "Tasks" %}{% endblock %}
+{% block content %}
+    <h1 class="my-4">{% translate "Tasks" %}</h1>
+    <a href="{% url 'create_task' %}" class="btn btn-primary mb-2" role="button">{% translate "TaskCreate" %}</a>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% translate "Name" %}</th>
+            <th>{% translate "Status" %}</th>
+            <th>{% translate "Author" %}</th>
+            <th>{% translate "Executor" %}</th>
+            <th colspan="2">{% translate "CreationDate" %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for task in tasks %}
+            <tr>
+                <td class="align-middle">{{ task.id }}</td>
+                <td class="align-middle"><a href="{% url 'task_details' task.id %}">{{ task.name }}</a></td>
+                <td class="align-middle">{{ task.status }}</td>
+                <td class="align-middle">{{ task.author }}</td>
+                <td class="align-middle">{{ task.executor|default:_("NotAssignedYet") }}</td>
+                <td class="align-middle">{{ task.date_created|date:"d.m.Y H:i" }}</td>
+                <td class="align-middle">
+                    <a href="{% url 'update_task' task.id %}">{% translate "Update" %}</a>
+                    <br>
+                    <a href="{% url 'delete_task' task.id %}">{% translate "Delete" %}</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
