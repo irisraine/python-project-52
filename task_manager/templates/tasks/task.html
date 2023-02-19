@@ -34,7 +34,9 @@
                 <div class="col">
                     <h6>{% translate "Labels" %}:</h6>
                     <ul>
-                        <li><i>тут пока пустота</i></li>
+                        {% for label in task.labels.all %}
+                        <li><i>{{ label }}</i></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

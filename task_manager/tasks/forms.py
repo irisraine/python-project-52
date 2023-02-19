@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from .models import Task
 from task_manager.statuses.forms import Status
 from task_manager.users.forms import User
+from task_manager.labels.forms import Label
 
 
 class TaskForm(forms.ModelForm):
@@ -10,6 +11,7 @@ class TaskForm(forms.ModelForm):
         max_length=150,
         required=True,
         label=_("Name"),
+        error_messages={'unique': _('TaskExistsError')},
         widget=forms.TextInput(attrs={'placeholder': _('Name')}),
     )
     description = forms.CharField(
@@ -32,6 +34,12 @@ class TaskForm(forms.ModelForm):
         empty_label=_('SelectExecutor')
     )
 
+    labels = forms.ModelMultipleChoiceField(
+        queryset=Label.objects.all(),
+        label=_('Labels'),
+        required=False
+    )
+
     class Meta:
         model = Task
-        fields = ('name', 'description', 'status', 'executor')
+        fields = ('name', 'description', 'status', 'executor', 'labels')
