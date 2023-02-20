@@ -215,6 +215,21 @@ beautifulsoup4 = ">=4.8.0"
 Django = ">=3.2"
 
 [[package]]
+name = "django-filter"
+version = "22.1"
+description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "django-filter-22.1.tar.gz", hash = "sha256:ed473b76e84f7e83b2511bb2050c3efb36d135207d0128dfe3ae4b36e3594ba5"},
+    {file = "django_filter-22.1-py3-none-any.whl", hash = "sha256:ed429e34760127e3520a67f415bec4c905d4649fbe45d0d6da37e6ff5e0287eb"},
+]
+
+[package.dependencies]
+Django = ">=3.2"
+
+[[package]]
 name = "exceptiongroup"
 version = "1.1.0"
 description = "Backport of PEP 654 (exception groups)"
@@ -565,4 +580,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.1"
-content-hash = "901a050e28a7fc02156042eef9b542e0a645726f1908895932f8bae151041a6d"
+content-hash = "23f481c113ebd286615605e455d8f6c0e53fde4185bb88ac93321612ec14dbe0"
