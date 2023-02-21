@@ -6,38 +6,35 @@
 {% block content %}
     <h1 class="my-4">{% translate "Tasks" %}</h1>
     <a href="{% url 'create_task' %}" class="btn btn-primary mb-2" role="button">{% translate "TaskCreate" %}</a>
+    <button type="button" class="btn btn-primary mb-2 ml-1" data-toggle="button" aria-pressed="true" onclick="toggleTaskFilteringForm()">{% translate "TaskFiltering" %}</button>
 
-    <div class="card mb-3">
+    <div class="card mb-3" id="task-filter">
         <div class="card-body bg-light">
             <form method="get">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row row-cols-1 row-cols-sm-3">
+                        <div class="col h-100">
                             <div class="form-group">
                                 <div class="text-center"><label for="{{ filter.form.status.id_for_label }}">{% translate "Status" %}</label></div>
                                 <div>{{ filter.form.status }}</div>
+                                <div><small class="text-danger">{{ filter.form.status.errors }}</small></div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col h-100">
                             <div class="form-group">
                                 <div class="text-center"><label for="{{ filter.form.executor.id_for_label }}">{% translate "Executor" %}</label></div>
                                 <div>{{ filter.form.executor }}</div>
+                                <div><small class="text-danger">{{ filter.form.executor.errors }}</small></div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col h-100">
                             <div class="form-group">
                                 <div class="text-center"><label for="{{ filter.form.labels.id_for_label }}">{% translate "Label" %}</label></div>
                                 <div>{{ filter.form.labels }}</div>
+                                <div><small class="text-danger">{{ filter.form.labels.errors }}</small></div>
                             </div>
                         </div>
                     </div>
-                    {% if filter.form.status.errors or filter.form.executor.errors or filter.form.labels.errors %}
-                    <div class="row">
-                        <div class="col-4"><small class="text-danger">{{ filter.form.status.errors }}</small></div>
-                        <div class="col-4"><small class="text-danger">{{ filter.form.executor.errors }}</small></div>
-                        <div class="col-4"><small class="text-danger">{{ filter.form.labels.errors }}</small></div>
-                    </div>
-                    {% endif %}
                     <div class="row">
                         <div class="col d-flex justify-content-center">
                             <div class="form-group">

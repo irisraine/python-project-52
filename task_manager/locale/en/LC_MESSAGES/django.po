@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 00:49+0000\n"
+"POT-Creation-Date: 2023-02-21 18:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,13 +23,29 @@ msgstr ""
 #: task_manager/tasks/forms.py:13 task_manager/tasks/forms.py:15
 #: task_manager/templates/labels/labels_list.html:13
 #: task_manager/templates/statuses/statuses_list.html:13
-#: task_manager/templates/tasks/tasks_list.html:59
+#: task_manager/templates/tasks/tasks_list.html:63
 msgid "Name"
 msgstr "Name"
 
 #: task_manager/labels/forms.py:11
 msgid "LabelExistsError"
 msgstr "A label with the same name already exists"
+
+#: task_manager/labels/models.py:13
+#: task_manager/templates/tasks/tasks_list.html:32
+msgid "Label"
+msgstr "Label"
+
+#: task_manager/labels/models.py:14 task_manager/tasks/forms.py:39
+#: task_manager/templates/labels/label_create.html:5
+#: task_manager/templates/labels/label_delete.html:5
+#: task_manager/templates/labels/label_update.html:5
+#: task_manager/templates/labels/labels_list.html:5
+#: task_manager/templates/labels/labels_list.html:7
+#: task_manager/templates/layout/default.html:36
+#: task_manager/templates/tasks/task.html:35
+msgid "Labels"
+msgstr "Labels"
 
 #: task_manager/labels/views.py:23
 msgid "LabelCreateSuccess"
@@ -54,6 +70,23 @@ msgstr "You aren't authorized! You need to log in first."
 #: task_manager/statuses/forms.py:11
 msgid "StatusExistsError"
 msgstr "A status with the same name already exists"
+
+#: task_manager/statuses/models.py:13 task_manager/tasks/forms.py:26
+#: task_manager/templates/tasks/task.html:25
+#: task_manager/templates/tasks/tasks_list.html:18
+#: task_manager/templates/tasks/tasks_list.html:64
+msgid "Status"
+msgstr "Status"
+
+#: task_manager/statuses/models.py:14
+#: task_manager/templates/layout/default.html:33
+#: task_manager/templates/statuses/status_create.html:5
+#: task_manager/templates/statuses/status_delete.html:5
+#: task_manager/templates/statuses/status_update.html:5
+#: task_manager/templates/statuses/statuses_list.html:5
+#: task_manager/templates/statuses/statuses_list.html:7
+msgid "Statuses"
+msgstr "Statuses"
 
 #: task_manager/statuses/views.py:23
 msgid "StatusCreateSuccess"
@@ -91,19 +124,13 @@ msgstr "A task with the same name already exists"
 msgid "Description"
 msgstr "Description"
 
-#: task_manager/tasks/forms.py:26 task_manager/templates/tasks/task.html:25
-#: task_manager/templates/tasks/tasks_list.html:17
-#: task_manager/templates/tasks/tasks_list.html:60
-msgid "Status"
-msgstr "Status"
-
 #: task_manager/tasks/forms.py:28
 msgid "SelectStatus"
 msgstr "select status"
 
 #: task_manager/tasks/forms.py:32 task_manager/templates/tasks/task.html:21
-#: task_manager/templates/tasks/tasks_list.html:23
-#: task_manager/templates/tasks/tasks_list.html:62
+#: task_manager/templates/tasks/tasks_list.html:25
+#: task_manager/templates/tasks/tasks_list.html:66
 msgid "Executor"
 msgstr "Executor"
 
@@ -111,16 +138,19 @@ msgstr "Executor"
 msgid "SelectExecutor"
 msgstr "select executor"
 
-#: task_manager/tasks/forms.py:39
-#: task_manager/templates/labels/label_create.html:5
-#: task_manager/templates/labels/label_delete.html:5
-#: task_manager/templates/labels/label_update.html:5
-#: task_manager/templates/labels/labels_list.html:5
-#: task_manager/templates/labels/labels_list.html:7
-#: task_manager/templates/layout/default.html:36
-#: task_manager/templates/tasks/task.html:35
-msgid "Labels"
-msgstr "Labels"
+#: task_manager/tasks/models.py:21
+msgid "Task"
+msgstr "Task"
+
+#: task_manager/tasks/models.py:22
+#: task_manager/templates/layout/default.html:39
+#: task_manager/templates/tasks/task_create.html:5
+#: task_manager/templates/tasks/task_delete.html:5
+#: task_manager/templates/tasks/task_update.html:5
+#: task_manager/templates/tasks/tasks_list.html:5
+#: task_manager/templates/tasks/tasks_list.html:7
+msgid "Tasks"
+msgstr "Tasks"
 
 #: task_manager/tasks/views.py:30
 msgid "TaskCreateSuccess"
@@ -210,7 +240,7 @@ msgstr "Update label"
 #: task_manager/templates/statuses/statuses_list.html:24
 #: task_manager/templates/tasks/task.html:49
 #: task_manager/templates/tasks/task_update.html:11
-#: task_manager/templates/tasks/tasks_list.html:76
+#: task_manager/templates/tasks/tasks_list.html:80
 #: task_manager/templates/users/user_update.html:11
 #: task_manager/templates/users/users_list.html:25
 msgid "Update"
@@ -219,7 +249,7 @@ msgstr "Update"
 #: task_manager/templates/labels/labels_list.html:14
 #: task_manager/templates/statuses/statuses_list.html:14
 #: task_manager/templates/tasks/task.html:29
-#: task_manager/templates/tasks/tasks_list.html:63
+#: task_manager/templates/tasks/tasks_list.html:67
 #: task_manager/templates/users/users_list.html:14
 msgid "CreationDate"
 msgstr "Creation date"
@@ -227,7 +257,7 @@ msgstr "Creation date"
 #: task_manager/templates/labels/labels_list.html:26
 #: task_manager/templates/statuses/statuses_list.html:26
 #: task_manager/templates/tasks/task.html:50
-#: task_manager/templates/tasks/tasks_list.html:78
+#: task_manager/templates/tasks/tasks_list.html:82
 #: task_manager/templates/users/users_list.html:27
 msgid "Delete"
 msgstr "Delete"
@@ -243,24 +273,6 @@ msgstr "Task manager"
 #: task_manager/templates/users/users_list.html:7
 msgid "Users"
 msgstr "Users"
-
-#: task_manager/templates/layout/default.html:33
-#: task_manager/templates/statuses/status_create.html:5
-#: task_manager/templates/statuses/status_delete.html:5
-#: task_manager/templates/statuses/status_update.html:5
-#: task_manager/templates/statuses/statuses_list.html:5
-#: task_manager/templates/statuses/statuses_list.html:7
-msgid "Statuses"
-msgstr "Statuses"
-
-#: task_manager/templates/layout/default.html:39
-#: task_manager/templates/tasks/task_create.html:5
-#: task_manager/templates/tasks/task_delete.html:5
-#: task_manager/templates/tasks/task_update.html:5
-#: task_manager/templates/tasks/tasks_list.html:5
-#: task_manager/templates/tasks/tasks_list.html:7
-msgid "Tasks"
-msgstr "Tasks"
 
 #: task_manager/templates/layout/default.html:46
 msgid "LogOut"
@@ -310,12 +322,12 @@ msgid "TaskShow"
 msgstr "Show task"
 
 #: task_manager/templates/tasks/task.html:17
-#: task_manager/templates/tasks/tasks_list.html:61
+#: task_manager/templates/tasks/tasks_list.html:65
 msgid "Author"
 msgstr "Author"
 
 #: task_manager/templates/tasks/task.html:22
-#: task_manager/templates/tasks/tasks_list.html:73
+#: task_manager/templates/tasks/tasks_list.html:77
 msgid "NotAssignedYet"
 msgstr "executor isn't assigned yet"
 
@@ -339,19 +351,19 @@ msgstr "Delete task"
 msgid "TaskUpdate"
 msgstr "Update task"
 
-#: task_manager/templates/tasks/tasks_list.html:29
-msgid "Label"
-msgstr "Label"
+#: task_manager/templates/tasks/tasks_list.html:9
+msgid "TaskFiltering"
+msgstr "Task filtering"
 
-#: task_manager/templates/tasks/tasks_list.html:39
+#: task_manager/templates/tasks/tasks_list.html:43
 msgid "SelfTasksOnly"
 msgstr "Only my own tasks"
 
-#: task_manager/templates/tasks/tasks_list.html:46
+#: task_manager/templates/tasks/tasks_list.html:50
 msgid "ShowFilteredTasks"
 msgstr "Show"
 
-#: task_manager/templates/tasks/tasks_list.html:47
+#: task_manager/templates/tasks/tasks_list.html:51
 msgid "ResetForm"
 msgstr "Clear"
 
