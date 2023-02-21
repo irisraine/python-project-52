@@ -34,9 +34,13 @@
                 <div class="col">
                     <h6>{% translate "Labels" %}:</h6>
                     <ul>
-                        {% for label in task.labels.all %}
-                        <li><i>{{ label }}</i></li>
-                        {% endfor %}
+                        {% if not task.labels.all%}
+                        <p><i>{% translate "NoLabelsYet" %}</i></p>
+                        {% else %}
+                            {% for label in task.labels.all %}
+                            <li><i>{{ label }}</i></li>
+                            {% endfor %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>

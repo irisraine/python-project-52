@@ -9,23 +9,25 @@ from task_manager.labels.models import Label
 class TaskFilter(FilterSet):
     status = ModelChoiceFilter(
         queryset=Status.objects.all(),
-        label=_('Status')
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        empty_label=_('AnyStatus')
     )
     executor = ModelChoiceFilter(
         queryset=User.objects.all(),
-        label=_('Executor')
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        empty_label=_('AnyExecutor')
     )
     labels = ModelChoiceFilter(
         queryset=Label.objects.all(),
-        label=_('Label')
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        empty_label=_('AnyLabel')
     )
-    current_user_tasks = BooleanFilter(
-        method='get_current_user_tasks',
-        label=_('CurrentUserOnly'),
-        widget=forms.CheckboxInput,
+    self_tasks = BooleanFilter(
+        method='get_self_tasks',
+        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}),
     )
 
-    def get_current_user_tasks(self, queryset, name, value):
+    def get_self_tasks(self, queryset, name, value):
         if value:
             return queryset.filter(author=self.request.user)
         return queryset
