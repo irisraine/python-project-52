@@ -16,26 +16,40 @@ class LabelListView(AuthorizationMixin, ListView):
 
 
 class LabelCreateView(SuccessMessageMixin, AuthorizationMixin, CreateView):
-    template_name = 'labels/label_create.html'
+    template_name = 'form.html'
     model = Label
     form_class = LabelForm
     success_url = reverse_lazy("labels_list")
     success_message = _('LabelCreateSuccess')
+    extra_context = {
+        'category': _("Labels"),
+        'title_action': _("LabelCreate"),
+        'button': _("ButtonCreate")
+    }
 
 
 class LabelUpdateView(SuccessMessageMixin, AuthorizationMixin, UpdateView):
-    template_name = 'labels/label_update.html'
+    template_name = 'form.html'
     model = Label
     form_class = LabelForm
     success_url = reverse_lazy('labels_list')
     success_message = _('LabelUpdateSuccess')
+    extra_context = {
+        'category': _("Labels"),
+        'title_action': _("LabelUpdate"),
+        'button': _("Update")
+    }
 
 
 class LabelDeleteView(SuccessMessageMixin, AuthorizationMixin, DeleteView):
-    template_name = 'labels/label_delete.html'
+    template_name = 'delete.html'
     model = Label
     success_url = reverse_lazy('labels_list')
     success_message = _('LabelDeleteSuccess')
+    extra_context = {
+        'category': _("Labels"),
+        'title_action': _("LabelDelete")
+    }
 
     def post(self, request, *args, **kwargs):
         label = Label.objects.get(id=kwargs['pk'])

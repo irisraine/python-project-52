@@ -23,11 +23,16 @@ class TaskDetailView(AuthorizationMixin, DetailView):
 
 
 class TaskCreateView(SuccessMessageMixin, AuthorizationMixin, CreateView):
-    template_name = 'tasks/task_create.html'
+    template_name = 'form.html'
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy("tasks_list")
     success_message = _('TaskCreateSuccess')
+    extra_context = {
+        'category': _("Tasks"),
+        'title_action': _("TaskCreate"),
+        'button': _("ButtonCreate")
+    }
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -35,15 +40,24 @@ class TaskCreateView(SuccessMessageMixin, AuthorizationMixin, CreateView):
 
 
 class TaskUpdateView(SuccessMessageMixin, AuthorizationMixin, UpdateView):
-    template_name = 'tasks/task_update.html'
+    template_name = 'form.html'
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy('tasks_list')
     success_message = _('TaskUpdateSuccess')
+    extra_context = {
+        'category': _("Tasks"),
+        'title_action': _("TaskUpdate"),
+        'button': _("Update")
+    }
 
 
 class TaskDeleteView(SuccessMessageMixin, AuthorizationMixin, DeleteView):
-    template_name = 'tasks/task_delete.html'
+    template_name = 'delete.html'
     model = Task
     success_url = reverse_lazy('tasks_list')
     success_message = _('TaskDeleteSuccess')
+    extra_context = {
+        'category': _("Tasks"),
+        'title_action': _("TaskDelete")
+    }

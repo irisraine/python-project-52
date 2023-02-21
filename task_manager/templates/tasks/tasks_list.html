@@ -1,4 +1,4 @@
-{% extends 'layout/default.html' %}
+{% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load i18n %}
 
@@ -37,7 +37,7 @@
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
-                            <div class="form-group">
+                            <div class="form-group mb-2">
                                 <div class="ml-3">
                                     {{ filter.form.self_tasks }}
                                     <label for="{{ filter.form.self_tasks.id_for_label }}">{% translate "SelfTasksOnly" %}</label>

@@ -22,3 +22,7 @@ class UserLogoutView(LogoutView):
     def dispatch(self, request, *args, **kwargs):
         messages.info(request, _('UserLogOut'))
         return super().dispatch(request, *args, **kwargs)
+
+
+class PageNotFoundView(TemplateView):
+    template_name = '404.html'

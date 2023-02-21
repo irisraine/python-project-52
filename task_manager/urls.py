@@ -3,7 +3,7 @@ task_manager URL Configuration
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import IndexView, UserLoginView, UserLogoutView
+from .views import IndexView, UserLoginView, UserLogoutView, PageNotFoundView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -15,3 +15,5 @@ urlpatterns = [
     path('tasks/', include('task_manager.tasks.urls')),
     path('labels/', include('task_manager.labels.urls'))
 ]
+
+handler404 = PageNotFoundView.as_view()

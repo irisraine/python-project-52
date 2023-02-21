@@ -16,26 +16,40 @@ class StatusListView(AuthorizationMixin, ListView):
 
 
 class StatusCreateView(SuccessMessageMixin, AuthorizationMixin, CreateView):
-    template_name = 'statuses/status_create.html'
+    template_name = 'form.html'
     model = Status
     form_class = StatusForm
     success_url = reverse_lazy("statuses_list")
     success_message = _('StatusCreateSuccess')
+    extra_context = {
+        'category': _("Statuses"),
+        'title_action': _("StatusCreate"),
+        'button': _("ButtonCreate")
+    }
 
 
 class StatusUpdateView(SuccessMessageMixin, AuthorizationMixin, UpdateView):
-    template_name = 'statuses/status_update.html'
+    template_name = 'form.html'
     model = Status
     form_class = StatusForm
     success_url = reverse_lazy('statuses_list')
     success_message = _('StatusUpdateSuccess')
+    extra_context = {
+        'category': _("Statuses"),
+        'title_action': _("StatusUpdate"),
+        'button': _("Update")
+    }
 
 
 class StatusDeleteView(SuccessMessageMixin, AuthorizationMixin, DeleteView):
-    template_name = 'statuses/status_delete.html'
+    template_name = 'delete.html'
     model = Status
     success_url = reverse_lazy('statuses_list')
     success_message = _('StatusDeleteSuccess')
+    extra_context = {
+        'category': _("Statuses"),
+        'title_action': _("StatusDelete")
+    }
 
     def post(self, request, *args, **kwargs):
         status = Status.objects.get(id=kwargs['pk'])

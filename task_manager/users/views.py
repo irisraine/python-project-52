@@ -16,7 +16,7 @@ class UsersListView(ListView):
 
 
 class UserCreateView(SuccessMessageMixin, CreateView):
-    template_name = 'users/user_create.html'
+    template_name = 'users/user_register.html'
     model = User
     form_class = UserForm
     success_url = reverse_lazy("login")
@@ -24,20 +24,29 @@ class UserCreateView(SuccessMessageMixin, CreateView):
 
 
 class UserUpdateView(SuccessMessageMixin, AuthorizationMixin, UserPermissionMixin, UpdateView):
-    template_name = 'users/user_update.html'
+    template_name = 'form.html'
     model = User
     form_class = UserForm
     success_url = reverse_lazy('users_list')
     success_message = _('UserUpdateSuccess')
     permission_denial_message = _("UserUpdateDenial")
+    extra_context = {
+        'category': _("Users"),
+        'title_action': _("UserUpdate"),
+        'button': _("Update")
+    }
 
 
 class UserDeleteView(SuccessMessageMixin, AuthorizationMixin, UserPermissionMixin, DeleteView):
-    template_name = 'users/user_delete.html'
+    template_name = 'delete.html'
     model = User
     success_url = reverse_lazy('users_list')
     success_message = _('UserDeleteSuccess')
     permission_denial_message = _("UserDeleteDenial")
+    extra_context = {
+        'category': _("Users"),
+        'title_action': _("UserDelete")
+    }
 
     def post(self, request, *args, **kwargs):
         user = User.objects.get(id=kwargs['pk'])
