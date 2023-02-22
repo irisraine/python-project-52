@@ -120,7 +120,7 @@ msgstr "Status is successfully created"
 #: task_manager/statuses/views.py:26
 #: task_manager/templates/statuses/statuses_list.html:8
 msgid "StatusCreate"
-msgstr "Status is successfully created"
+msgstr "Create status"
 
 #: task_manager/statuses/views.py:36
 msgid "StatusUpdateSuccess"
