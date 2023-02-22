@@ -2,6 +2,7 @@
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/irisraine/python-project-52/workflows/hexlet-check/badge.svg)](https://github.com/irisraine/python-project-52/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d128cfc101f0b634a741/maintainability)](https://codeclimate.com/github/irisraine/python-project-52/maintainability)
 
 ### Description
 
