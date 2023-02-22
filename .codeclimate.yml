@@ -1,0 +1,10 @@
+version: "2"
+plugins:
+  duplication:
+    enabled: true
+    exclude_patterns:
+    - "task_manager/**/urls.py"
+    - "task_manager/labels/migrations/"
+    - "task_manager/labels/forms.py"
+    - "task_manager/labels/models.py"
+    - "task_manager/labels/views.py"
