@@ -5,5 +5,6 @@
 
 ### Description
 
-Educational project. Task Manager is a task management system. It allows you to set tasks, 
-assign performers and change their statuses. Registration and authentication are required to work with the system.
+Educational project. Task Manager is a complete application based on the Django framework. 
+It is a task management system. It allows you to set tasks, assign performers and change their statuses. 
+Registration and authentication are required to work with the system.
