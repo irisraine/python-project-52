@@ -93,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru-ru' if not os.getenv('LANGUAGE') else os.getenv('LANGUAGE')
 
 TIME_ZONE = 'UTC'
 
@@ -101,11 +101,17 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = (
+    ('en-us', 'English'),
+    ('ru-ru', 'Russian'),
+)
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
