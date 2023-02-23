@@ -24,5 +24,5 @@ start-dev:
 	poetry run python manage.py runserver
 	
 coverage:
-	poetry run coverage run manage.py test
-	poetry run coverage xml --omit=task_manager/settings.py
+	poetry run coverage run --source='.' manage.py test
+	poetry run coverage xml
