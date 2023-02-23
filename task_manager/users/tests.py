@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from .models import User
 
 
-USER_ZERO = {
+USER = {
     'username': 'eren-yeager',
     'password': 'attacktitan',
 }
@@ -41,7 +41,7 @@ class UsersTest(TestCase):
     url_delete = reverse_lazy('delete_user', args=[1])
 
     def setUp(self):
-        self.user = User.objects.create_user(**USER_ZERO)
+        self.user = User.objects.create_user(**USER)
 
     def test_user_register(self):
         initial_users_count = User.objects.count()
@@ -50,16 +50,16 @@ class UsersTest(TestCase):
         self.assertEqual(User.objects.count(), initial_users_count + 2)
 
     def test_user_login(self):
-        self.client.post(self.url_login, data=USER_ZERO)
+        self.client.post(self.url_login, data=USER)
         current_session_user_id = self.client.session['_auth_user_id']
         self.assertEqual(User.objects.get(pk=current_session_user_id).username, 'eren-yeager')
 
     def test_user_update(self):
-        self.client.post(self.url_login, data=USER_ZERO)
+        self.client.post(self.url_login, data=USER)
         self.client.post(self.url_update, data=USER_THREE)
         self.assertEqual(User.objects.get(pk=1).username, 'levi-akkerman')
 
     def test_user_delete(self):
-        self.client.post(self.url_login, data=USER_ZERO)
+        self.client.post(self.url_login, data=USER)
         self.client.post(self.url_delete)
         self.assertEqual(User.objects.count(), 0)
