@@ -8,6 +8,8 @@ plugins:
     - "task_manager/labels/forms.py"
     - "task_manager/labels/models.py"
     - "task_manager/labels/views.py"
+    - "task_manager/labels/tests.py"
     - "task_manager/statuses/forms.py"
     - "task_manager/statuses/views.py"
+    - "task_manager/statuses/tests.py"
     - "task_manager/tasks/filters.py"
