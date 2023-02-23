@@ -45,8 +45,8 @@ class UsersTest(TestCase):
 
     def test_user_register(self):
         initial_users_count = User.objects.count()
-        self.client.post(self.url_register, USER_ONE)
-        self.client.post(self.url_register, USER_TWO)
+        self.client.post(self.url_register, data=USER_ONE)
+        self.client.post(self.url_register, data=USER_TWO)
         self.assertEqual(User.objects.count(), initial_users_count + 2)
 
     def test_user_login(self):
@@ -59,6 +59,6 @@ class UsersTest(TestCase):
         self.assertEqual(User.objects.get(pk=1).username, 'levi-akkerman')
 
     def test_user_delete(self):
-        self.client.post(reverse_lazy('login'), data=USER_ZERO)
+        self.client.post(self.url_login, data=USER_ZERO)
         self.client.post(self.url_delete)
         self.assertEqual(User.objects.count(), 0)
