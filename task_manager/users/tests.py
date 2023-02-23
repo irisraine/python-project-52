@@ -37,8 +37,8 @@ class UsersTest(TestCase):
 
     url_register = reverse_lazy('create_user')
     url_login = reverse_lazy('login')
-    url_update = reverse_lazy('update_user', args=[1])
-    url_delete = reverse_lazy('delete_user', args=[1])
+    url_user_update = reverse_lazy('update_user', args=[1])
+    url_user_delete = reverse_lazy('delete_user', args=[1])
 
     def setUp(self):
         self.user = User.objects.create_user(**USER)
@@ -56,10 +56,10 @@ class UsersTest(TestCase):
 
     def test_user_update(self):
         self.client.post(self.url_login, data=USER)
-        self.client.post(self.url_update, data=USER_THREE)
+        self.client.post(self.url_user_update, data=USER_THREE)
         self.assertEqual(User.objects.get(pk=1).username, 'levi-akkerman')
 
     def test_user_delete(self):
         self.client.post(self.url_login, data=USER)
-        self.client.post(self.url_delete)
+        self.client.post(self.url_user_delete)
         self.assertEqual(User.objects.count(), 0)
