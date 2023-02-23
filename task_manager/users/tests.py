@@ -51,7 +51,8 @@ class UsersTest(TestCase):
 
     def test_user_login(self):
         self.client.post(self.url_login, data=USER_ZERO)
-        self.assertEqual(User.objects.get(username='eren-yeager').username, 'eren-yeager')
+        current_session_user_id = self.client.session['_auth_user_id']
+        self.assertEqual(User.objects.get(pk=current_session_user_id).username, 'eren-yeager')
 
     def test_user_update(self):
         self.client.post(self.url_login, data=USER_ZERO)
