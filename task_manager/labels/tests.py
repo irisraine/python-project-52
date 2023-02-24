@@ -9,17 +9,9 @@ USER = {
     'password': 'attacktitan',
 }
 
-LABEL_ONE = {
-    'name': 'Sole Salvation'
-}
-
-LABEL_TWO = {
-    'name': 'Descent'
-}
-
-LABEL_THREE = {
-    'name': 'Perfect Game'
-}
+LABEL_ONE = {'name': 'Sole Salvation'}
+LABEL_TWO = {'name': 'Descent'}
+LABEL_THREE = {'name': 'Perfect Game'}
 
 
 class LabelsTest(TestCase):

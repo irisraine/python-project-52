@@ -9,17 +9,9 @@ USER = {
     'password': 'attacktitan',
 }
 
-STATUS_ONE = {
-    'name': 'The Fall of Shiganshina'
-}
-
-STATUS_TWO = {
-    'name': 'The Basement'
-}
-
-STATUS_THREE = {
-    'name': 'The Town Where Everything Began'
-}
+STATUS_ONE = {'name': 'The Fall of Shiganshina'}
+STATUS_TWO = {'name': 'The Basement'}
+STATUS_THREE = {'name': 'The Town Where Everything Began'}
 
 
 class StatusesTest(TestCase):

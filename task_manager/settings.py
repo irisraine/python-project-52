@@ -107,6 +107,12 @@ LANGUAGES = (
     ('ru-ru', 'Russian'),
 )
 
+LOCALE_URL = 'locale/'
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
+
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 

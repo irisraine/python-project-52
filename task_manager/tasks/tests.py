@@ -8,29 +8,13 @@ USER = {
     'password': 'attacktitan',
 }
 
-STATUS_ONE = {
-    'name': 'To You, 2,000 Years From Now'
-}
+STATUS_ONE = {'name': 'To You, 2,000 Years From Now'}
+STATUS_TWO = {'name': 'From You, 2,000 Years Ago'}
+STATUS_THREE = {'name': 'Guilty Shadow'}
 
-STATUS_TWO = {
-    'name': 'From You, 2,000 Years Ago'
-}
-
-STATUS_THREE = {
-    'name': 'Guilty Shadow'
-}
-
-LABEL_ONE = {
-    'name': 'A Dream I Once Had'
-}
-
-LABEL_TWO = {
-    'name': 'Delusions of Strength'
-}
-
-LABEL_THREE = {
-    'name': 'Euthanasia plan by Zeke Yeager'
-}
+LABEL_ONE = {'name': 'A Dream I Once Had'}
+LABEL_TWO = {'name': 'Delusions of Strength'}
+LABEL_THREE = {'name': 'Euthanasia plan by Zeke Yeager'}
 
 TASK_ONE = {
     'name': 'The Battle of Heaven and Earth',
@@ -38,17 +22,16 @@ TASK_ONE = {
     'status': 1,
     'labels': 1,
 }
-
 TASK_TWO = {
     'name': 'Toward the Tree on That Hill',
     'description': 'Afterwards, Paradis is destroyed by war',
     'status': 2,
     'labels': 2,
 }
-
 TASK_THREE = {
     'name': 'Titans',
-    'description': 'Life is pointless since to live also means to eventually die',
+    'description': 'Life is pointless since to live '
+                   'also means to eventually die',
     'status': 3,
     'labels': 3,
 }
@@ -78,7 +61,8 @@ class TasksTest(TestCase):
         task = Task.objects.get(id=1)
         self.assertEqual(task.name, 'The Battle of Heaven and Earth')
         self.assertEqual(task.status.name, 'To You, 2,000 Years From Now')
-        self.assertEqual(task.description, 'Mentally sent a message using the Founding Titan')
+        self.assertEqual(task.description, 'Mentally sent a message '
+                                           'using the Founding Titan')
         self.assertEqual(task.labels.all()[0].name, 'A Dream I Once Had')
 
     def test_task_create(self):
@@ -86,7 +70,8 @@ class TasksTest(TestCase):
         task = Task.objects.get(id=2)
         self.assertEqual(task.name, 'Toward the Tree on That Hill')
         self.assertEqual(task.status.name, 'From You, 2,000 Years Ago')
-        self.assertEqual(task.description, 'Afterwards, Paradis is destroyed by war')
+        self.assertEqual(task.description, 'Afterwards, Paradis '
+                                           'is destroyed by war')
         self.assertEqual(task.labels.all()[0].name, 'Delusions of Strength')
 
     def test_task_update(self):
@@ -94,8 +79,10 @@ class TasksTest(TestCase):
         task = Task.objects.get(id=1)
         self.assertEqual(task.name, 'Titans')
         self.assertEqual(task.status.name, 'Guilty Shadow')
-        self.assertEqual(task.description, 'Life is pointless since to live also means to eventually die')
-        self.assertEqual(task.labels.all()[0].name, 'Euthanasia plan by Zeke Yeager')
+        self.assertEqual(task.description, 'Life is pointless since to live '
+                                           'also means to eventually die')
+        self.assertEqual(task.labels.all()[0].name, 'Euthanasia plan '
+                                                    'by Zeke Yeager')
 
     def test_task_delete(self):
         self.client.post(self.url_task_delete)

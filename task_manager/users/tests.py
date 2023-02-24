@@ -15,7 +15,6 @@ USER_ONE = {
     'password1': 'azumabito',
     'password2': 'azumabito',
 }
-
 USER_TWO = {
     'first_name': 'Armin',
     'last_name': 'Arlert',
@@ -23,7 +22,6 @@ USER_TWO = {
     'password1': 'colossaltitan',
     'password2': 'colossaltitan',
 }
-
 USER_THREE = {
     'first_name': 'Levi',
     'last_name': 'Akkerman',
@@ -51,8 +49,8 @@ class UsersTest(TestCase):
 
     def test_user_login(self):
         self.client.post(self.url_login, data=USER)
-        current_session_user_id = self.client.session['_auth_user_id']
-        self.assertEqual(User.objects.get(pk=current_session_user_id).username, 'eren-yeager')
+        auth_id = self.client.session['_auth_user_id']
+        self.assertEqual(User.objects.get(pk=auth_id).username, 'eren-yeager')
 
     def test_user_update(self):
         self.client.post(self.url_login, data=USER)

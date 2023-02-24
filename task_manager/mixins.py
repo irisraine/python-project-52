@@ -16,7 +16,9 @@ class AuthorizationMixin(LoginRequiredMixin):
 
 class UserPermissionMixin(UserPassesTestMixin):
     def test_func(self):
-        return self.request.user.pk == self.get_object().pk or self.request.user.is_superuser
+        is_self_user = self.request.user.pk == self.get_object().pk
+        is_superuser = self.request.user.is_superuser
+        return is_self_user or is_superuser
 
     def handle_no_permission(self):
         messages.error(self.request, self.permission_denial_message)

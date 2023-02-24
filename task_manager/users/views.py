@@ -23,7 +23,8 @@ class UserCreateView(SuccessMessageMixin, CreateView):
     success_message = _('UserCreateSuccess')
 
 
-class UserUpdateView(SuccessMessageMixin, AuthorizationMixin, UserPermissionMixin, UpdateView):
+class UserUpdateView(SuccessMessageMixin, AuthorizationMixin,
+                     UserPermissionMixin, UpdateView):
     template_name = 'form.html'
     model = User
     form_class = UserForm
@@ -37,7 +38,8 @@ class UserUpdateView(SuccessMessageMixin, AuthorizationMixin, UserPermissionMixi
     }
 
 
-class UserDeleteView(SuccessMessageMixin, AuthorizationMixin, UserPermissionMixin, DeleteView):
+class UserDeleteView(SuccessMessageMixin, AuthorizationMixin,
+                     UserPermissionMixin, DeleteView):
     template_name = 'delete.html'
     model = User
     success_url = reverse_lazy('users_list')
