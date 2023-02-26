@@ -12,3 +12,9 @@
 Educational project. Task Manager is a complete application based on the Django framework. 
 It is a task management system. It allows you to set tasks, assign performers and change their statuses. 
 Registration and authentication are required to work with the system.
+
+### Demonstration
+
+The 
+[production version](https://web-production-90ca5.up.railway.app/)
+of the app is available at Railway platform.
