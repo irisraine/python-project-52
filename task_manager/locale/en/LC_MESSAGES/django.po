@@ -306,10 +306,6 @@ msgstr "Enter"
 msgid "ButtonSignIn"
 msgstr "Sign in"
 
-#: task_manager/templates/login.html:15
-msgid "AuthorizationAlreadyLogIn"
-msgstr "You are already logged in! Try logging out and signing in again."
-
 #: task_manager/templates/tasks/task.html:5
 #: task_manager/templates/tasks/task.html:7
 msgid "TaskShow"

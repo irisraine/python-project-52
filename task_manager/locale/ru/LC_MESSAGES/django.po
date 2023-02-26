@@ -308,10 +308,6 @@ msgstr "Вход"
 msgid "ButtonSignIn"
 msgstr "Войти"
 
-#: task_manager/templates/login.html:15
-msgid "AuthorizationAlreadyLogIn"
-msgstr "Вы уже вошли в систему! Попробуйте выйти и снова войти."
-
 #: task_manager/templates/tasks/task.html:5
 #: task_manager/templates/tasks/task.html:7
 msgid "TaskShow"
