@@ -10,5 +10,6 @@ class Label(models.Model):
         return self.name
 
     class Meta:
+        ordering = ['id']
         verbose_name = _('Label')
         verbose_name_plural = _('Labels')

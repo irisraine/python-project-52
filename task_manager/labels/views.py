@@ -13,7 +13,6 @@ class LabelListView(AuthorizationMixin, ListView):
     template_name = 'labels/labels_list.html'
     model = Label
     context_object_name = 'labels'
-    ordering = ['pk']
 
 
 class LabelCreateView(SuccessMessageMixin, AuthorizationMixin, CreateView):

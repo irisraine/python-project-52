@@ -30,6 +30,7 @@ class Task(models.Model):
         return self.name
 
     class Meta:
+        ordering = ['id']
         verbose_name = _('Task')
         verbose_name_plural = _('Tasks')
 

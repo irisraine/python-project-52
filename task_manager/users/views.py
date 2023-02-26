@@ -13,7 +13,6 @@ class UsersListView(ListView):
     template_name = 'users/users_list.html'
     model = User
     context_object_name = 'users'
-    ordering = ['pk']
 
 
 class UserCreateView(SuccessMessageMixin, CreateView):
