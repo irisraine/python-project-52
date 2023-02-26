@@ -126,7 +126,7 @@ msgstr "Создать статус"
 
 #: task_manager/statuses/views.py:36
 msgid "StatusUpdateSuccess"
-msgstr "Статус успешно изменен"
+msgstr "Статус успешно изменён"
 
 #: task_manager/statuses/views.py:39
 msgid "StatusUpdate"
@@ -134,7 +134,7 @@ msgstr "Изменение статуса"
 
 #: task_manager/statuses/views.py:48
 msgid "StatusDeleteSuccess"
-msgstr "Статус успешно удален"
+msgstr "Статус успешно удалён"
 
 #: task_manager/statuses/views.py:51
 msgid "StatusDelete"
@@ -383,7 +383,7 @@ msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/users/views.py:31
 msgid "UserUpdateSuccess"
-msgstr "Пользователь успешно изменен"
+msgstr "Пользователь успешно изменён"
 
 #: task_manager/users/views.py:32
 msgid "UserUpdateDenial"
@@ -395,7 +395,7 @@ msgstr "Изменение пользователя"
 
 #: task_manager/users/views.py:44
 msgid "UserDeleteSuccess"
-msgstr "Пользователь успешно удален"
+msgstr "Пользователь успешно удалён"
 
 #: task_manager/users/views.py:45
 msgid "UserDeleteDenial"
