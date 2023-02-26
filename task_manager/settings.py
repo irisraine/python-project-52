@@ -19,7 +19,7 @@ ALLOWED_HOSTS = [
     'webserver',
     'localhost',
     '127.0.0.1',
-    'web-production-90ca5.up.railway.app/'
+    'web-production-90ca5.up.railway.app'
 ]
 
 
