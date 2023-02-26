@@ -349,12 +349,6 @@ msgstr "Clear"
 msgid "ButtonSignUp"
 msgstr "Sign up"
 
-#: task_manager/templates/users/user_register.html:15
-msgid "UserRegisterDenialWhenAlreadyLogIn"
-msgstr ""
-"You can't register a new user when you are already logged in! Try logging "
-"out and signing up again."
-
 #: task_manager/templates/users/users_list.html:12
 msgid "Username"
 msgstr "Username"

@@ -351,12 +351,6 @@ msgstr "Очистить"
 msgid "ButtonSignUp"
 msgstr "Зарегистрировать"
 
-#: task_manager/templates/users/user_register.html:15
-msgid "UserRegisterDenialWhenAlreadyLogIn"
-msgstr ""
-"Вы не можете зарегистрировать нового пользователя, если вы уже вошли в "
-"систему! Попробуйте выйти и снова зарегистрироваться."
-
 #: task_manager/templates/users/users_list.html:12
 msgid "Username"
 msgstr "Имя пользователя"
