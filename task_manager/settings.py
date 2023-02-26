@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-ba29.up.railway.app',
+    'https://iris-python-project-52-production.up.railway.app',
 ]
 
 # Application definition

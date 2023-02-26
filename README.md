@@ -16,5 +16,5 @@ Registration and authentication are required to work with the system.
 ### Demonstration
 
 The 
-[production version](https://web-production-ba29.up.railway.app/)
+[production version](https://iris-python-project-52-production.up.railway.app/)
 of the app is available at Railway platform.
