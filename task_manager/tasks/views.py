@@ -14,6 +14,7 @@ class TaskListView(AuthorizationMixin, FilterView):
     model = Task
     filterset_class = TaskFilter
     context_object_name = 'tasks'
+    ordering = ['pk']
 
 
 class TaskDetailView(AuthorizationMixin, DetailView):

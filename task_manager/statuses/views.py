@@ -13,6 +13,7 @@ class StatusListView(AuthorizationMixin, ListView):
     template_name = 'statuses/statuses_list.html'
     model = Status
     context_object_name = 'statuses'
+    ordering = ['pk']
 
 
 class StatusCreateView(SuccessMessageMixin, AuthorizationMixin, CreateView):
