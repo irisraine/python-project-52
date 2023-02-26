@@ -11,9 +11,13 @@ class IndexView(TemplateView):
 
 
 class UserLoginView(SuccessMessageMixin, LoginView):
-    template_name = 'login.html'
+    template_name = 'sign.html'
     next_page = reverse_lazy('index')
     success_message = _('UserLogIn')
+    extra_context = {
+        'title_action': _("Enter"),
+        'button': _("ButtonSignIn")
+    }
 
 
 class UserLogoutView(LogoutView):

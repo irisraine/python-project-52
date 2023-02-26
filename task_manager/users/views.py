@@ -16,11 +16,15 @@ class UsersListView(ListView):
 
 
 class UserCreateView(SuccessMessageMixin, CreateView):
-    template_name = 'users/user_register.html'
+    template_name = 'sign.html'
     model = User
     form_class = UserForm
     success_url = reverse_lazy("login")
     success_message = _('UserCreateSuccess')
+    extra_context = {
+        'title_action': _("Register"),
+        'button': _("ButtonSignUp")
+    }
 
 
 class UserUpdateView(SuccessMessageMixin, AuthorizationMixin,

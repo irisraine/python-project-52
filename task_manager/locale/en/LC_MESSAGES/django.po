@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 21:59+0000\n"
+"POT-Creation-Date: 2023-02-26 19:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,12 +31,12 @@ msgstr "Name"
 msgid "LabelExistsError"
 msgstr "A label with the same name already exists"
 
-#: task_manager/labels/models.py:13
+#: task_manager/labels/models.py:14
 #: task_manager/templates/tasks/tasks_list.html:32
 msgid "Label"
 msgstr "Label"
 
-#: task_manager/labels/models.py:14 task_manager/labels/views.py:25
+#: task_manager/labels/models.py:15 task_manager/labels/views.py:25
 #: task_manager/labels/views.py:38 task_manager/labels/views.py:50
 #: task_manager/tasks/forms.py:39 task_manager/templates/base.html:36
 #: task_manager/templates/labels/labels_list.html:5
@@ -74,7 +74,7 @@ msgstr "Update label"
 #: task_manager/templates/tasks/task.html:49
 #: task_manager/templates/tasks/tasks_list.html:80
 #: task_manager/templates/users/users_list.html:25
-#: task_manager/users/views.py:36
+#: task_manager/users/views.py:41
 msgid "Update"
 msgstr "Update"
 
@@ -98,14 +98,14 @@ msgstr "You aren't authorized! You need to log in first."
 msgid "StatusExistsError"
 msgstr "A status with the same name already exists"
 
-#: task_manager/statuses/models.py:13 task_manager/tasks/forms.py:26
+#: task_manager/statuses/models.py:14 task_manager/tasks/forms.py:26
 #: task_manager/templates/tasks/task.html:25
 #: task_manager/templates/tasks/tasks_list.html:18
 #: task_manager/templates/tasks/tasks_list.html:64
 msgid "Status"
 msgstr "Status"
 
-#: task_manager/statuses/models.py:14 task_manager/statuses/views.py:25
+#: task_manager/statuses/models.py:15 task_manager/statuses/views.py:25
 #: task_manager/statuses/views.py:38 task_manager/statuses/views.py:50
 #: task_manager/templates/base.html:33
 #: task_manager/templates/statuses/statuses_list.html:5
@@ -176,11 +176,11 @@ msgstr "Executor"
 msgid "SelectExecutor"
 msgstr "select executor"
 
-#: task_manager/tasks/models.py:21
+#: task_manager/tasks/models.py:34
 msgid "Task"
 msgstr "Task"
 
-#: task_manager/tasks/models.py:22 task_manager/tasks/views.py:32
+#: task_manager/tasks/models.py:35 task_manager/tasks/views.py:32
 #: task_manager/tasks/views.py:49 task_manager/tasks/views.py:61
 #: task_manager/templates/base.html:39
 #: task_manager/templates/tasks/tasks_list.html:5
@@ -216,11 +216,10 @@ msgstr "Delete task"
 #: task_manager/templates/404.html:4 task_manager/templates/base.html:11
 #: task_manager/templates/delete.html:5 task_manager/templates/form.html:5
 #: task_manager/templates/labels/labels_list.html:5
-#: task_manager/templates/login.html:5
+#: task_manager/templates/sign.html:5
 #: task_manager/templates/statuses/statuses_list.html:5
 #: task_manager/templates/tasks/task.html:5
 #: task_manager/templates/tasks/tasks_list.html:5
-#: task_manager/templates/users/user_register.html:5
 #: task_manager/templates/users/users_list.html:5
 msgid "HexletTaskManager"
 msgstr "Hexlet Task manager"
@@ -231,7 +230,9 @@ msgstr "Page not found"
 
 #: task_manager/templates/404.html:8
 msgid "PageNotFoundText"
-msgstr "The page you requested is not available. The address of the page has changed, it has been deleted, or never existed at all."
+msgstr ""
+"The page you requested is not available. The address of the page has "
+"changed, it has been deleted, or never existed at all."
 
 #: task_manager/templates/404.html:9
 msgid "BackToMainPage"
@@ -244,7 +245,7 @@ msgstr "Task manager"
 #: task_manager/templates/base.html:29
 #: task_manager/templates/users/users_list.html:5
 #: task_manager/templates/users/users_list.html:7
-#: task_manager/users/views.py:34 task_manager/users/views.py:47
+#: task_manager/users/views.py:39 task_manager/users/views.py:53
 msgid "Users"
 msgstr "Users"
 
@@ -256,9 +257,7 @@ msgstr "Log out"
 msgid "LogIn"
 msgstr "Log in"
 
-#: task_manager/templates/base.html:53
-#: task_manager/templates/users/user_register.html:5
-#: task_manager/templates/users/user_register.html:7
+#: task_manager/templates/base.html:53 task_manager/users/views.py:25
 msgid "Register"
 msgstr "Register"
 
@@ -298,14 +297,6 @@ msgstr "Creation date"
 msgid "Delete"
 msgstr "Delete"
 
-#: task_manager/templates/login.html:5 task_manager/templates/login.html:7
-msgid "Enter"
-msgstr "Enter"
-
-#: task_manager/templates/login.html:12
-msgid "ButtonSignIn"
-msgstr "Sign in"
-
 #: task_manager/templates/tasks/task.html:5
 #: task_manager/templates/tasks/task.html:7
 msgid "TaskShow"
@@ -341,10 +332,6 @@ msgstr "Show"
 msgid "ResetForm"
 msgstr "Clear"
 
-#: task_manager/templates/users/user_register.html:12
-msgid "ButtonSignUp"
-msgstr "Sign up"
-
 #: task_manager/templates/users/users_list.html:12
 msgid "Username"
 msgstr "Username"
@@ -369,31 +356,35 @@ msgstr "Password should contain at least 3 characters"
 msgid "UserCreateSuccess"
 msgstr "User is successfully registered"
 
-#: task_manager/users/views.py:31
+#: task_manager/users/views.py:26
+msgid "ButtonSignUp"
+msgstr "Sign up"
+
+#: task_manager/users/views.py:36
 msgid "UserUpdateSuccess"
 msgstr "User is successfully updated"
 
-#: task_manager/users/views.py:32
+#: task_manager/users/views.py:37
 msgid "UserUpdateDenial"
 msgstr "You don't have permission to update another user."
 
-#: task_manager/users/views.py:35
+#: task_manager/users/views.py:40
 msgid "UserUpdate"
 msgstr "Update user"
 
-#: task_manager/users/views.py:44
+#: task_manager/users/views.py:50
 msgid "UserDeleteSuccess"
 msgstr "User is successfully deleted"
 
-#: task_manager/users/views.py:45
+#: task_manager/users/views.py:51
 msgid "UserDeleteDenial"
 msgstr "You don't have permission to delete another user."
 
-#: task_manager/users/views.py:48
+#: task_manager/users/views.py:54
 msgid "UserDelete"
 msgstr "Delete user"
 
-#: task_manager/users/views.py:54
+#: task_manager/users/views.py:60
 msgid "UserOnTaskDeleteDenial"
 msgstr "The user cannot be deleted because he is currently in use."
 
@@ -401,6 +392,14 @@ msgstr "The user cannot be deleted because he is currently in use."
 msgid "UserLogIn"
 msgstr "You are logged in"
 
-#: task_manager/views.py:23
+#: task_manager/views.py:18
+msgid "Enter"
+msgstr "Enter"
+
+#: task_manager/views.py:19
+msgid "ButtonSignIn"
+msgstr "Sign in"
+
+#: task_manager/views.py:27
 msgid "UserLogOut"
 msgstr "You are logged out"
