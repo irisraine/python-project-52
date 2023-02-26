@@ -205,7 +205,7 @@ msgstr "Задача успешно изменена"
 
 #: task_manager/tasks/views.py:50
 msgid "TaskUpdate"
-msgstr "Изменить задачу"
+msgstr "Изменение задачи"
 
 #: task_manager/tasks/views.py:59
 msgid "TaskDeleteSuccess"
@@ -213,7 +213,7 @@ msgstr "Задача успешно удалена"
 
 #: task_manager/tasks/views.py:62
 msgid "TaskDelete"
-msgstr "Удалить задачу"
+msgstr "Удаление задачи"
 
 #: task_manager/templates/404.html:4 task_manager/templates/base.html:11
 #: task_manager/templates/delete.html:5 task_manager/templates/form.html:5
