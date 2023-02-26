@@ -99,7 +99,7 @@ AUTH_USER_MODEL = 'users.User'
 # Internationalization
 LANGUAGE_CODE = 'ru-ru' if not os.getenv('LANGUAGE') else os.getenv('LANGUAGE')
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
